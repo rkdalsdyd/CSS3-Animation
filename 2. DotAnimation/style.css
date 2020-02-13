@@ -1,0 +1,32 @@
+* {padding: 0; margin: 0;}
+
+
+body {
+    position: relative;
+
+    width: 100vw; height: 100vh;
+    background-image: linear-gradient(120deg, rgb(77, 107, 240) 0%, #5837c5 100%);
+}
+
+.dot-content {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 70px; height: 70px;
+
+    animation: dot 1s ease-in-out 0.5s 100;
+}
+
+.dot {
+    display: block;
+    width: 10px; height: 10px; border-radius: 50%;
+    background-color: #fff;
+}
+
+@keyframes dot {
+    0%      {transform: rotate(0);}
+    100%    {transform: rotate(360deg);}
+}
