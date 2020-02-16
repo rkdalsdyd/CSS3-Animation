@@ -1,0 +1,63 @@
+* {margin: 0; padding: 0;}
+body {
+    height: 100vh; width: 100vw;
+    background-image: linear-gradient(90deg, rgb(241, 155, 169) 0%, rgb(250, 204, 118) 100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container {
+    position: relative;
+    width: 400px; height: 200px;
+}
+
+.ball {
+    position: absolute; left: 50%; top: 50%;
+    background-color: #fff;
+    border-radius: 50%;
+    
+    animation: movey 1.3s ease-in-out infinite alternate,
+    movex 1.3s linear infinite;
+               
+}
+
+.ball1 {
+    width: 40px; height: 40px;
+    opacity : 1;
+    animation-delay: 0s;
+}
+.ball2 {
+    width: 33px; height: 33px;
+    opacity : 0.85;
+    animation-delay: 0.15s;
+}
+.ball3 {
+    width: 27px; height: 27px;
+    opacity : 0.7;
+    animation-delay: 0.3s;
+}
+.ball4 {
+    width: 21px; height: 21px;
+    opacity : 0.55;
+    animation-delay: 0.45s;
+}
+.ball5 {
+    width: 15px; height: 15px;
+    opacity : 0.4;
+    animation-delay: 0.6s;
+}
+
+@keyframes movex {
+    0%      {transform: translateX(-100px);}
+    100%    {transform: translateX(100px);}
+}
+
+@keyframes movey {
+    0%      {transform: translateY(0);}
+    25%     {transform: translateY(-100px);}
+    50%     {transform: translateY(0);}
+    75%     {transform: translateY(-100px);}
+    100%    {transform: translateY(0);}
+}
