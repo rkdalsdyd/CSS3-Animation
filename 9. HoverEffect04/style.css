@@ -1,0 +1,97 @@
+* {padding: 0; margin: 0;}
+
+body {
+    height: 100vh; width: 100vw;
+    background-image: linear-gradient(120deg, rgb(67, 87, 105) 0%, rgb(19, 53, 82) 100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {display: block; width: 100%;}
+
+.container {
+    width: 80%;
+
+    display: flex;
+}
+
+.effect-container {
+    flex: 1;
+
+    position: relative;
+
+    box-sizing: border-box;
+    margin: 20px;
+
+}
+
+
+
+.effect-container .img-container.front {
+}
+.effect-container .img-container.back {
+    position: absolute; top: 0; left: 0;
+    z-index: -1;
+}
+
+.effect-container .img-container figcaption {
+    position: absolute; left: 0; bottom: 0;
+
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+}
+
+.effect-container .img-container figcaption strong {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+.effect-container .img-container figcaption em {
+    display: block;
+    font-size: 0.8rem;
+}
+
+.effect-container {
+    transform-style: preserve-3d;
+    perspective: 700px;
+}
+.effect-container figure {
+    transition: transform 0.5s ease-in;
+}
+
+
+
+.horizontal figure.front {
+    transform: rotateY(0deg);
+}
+.horizontal figure.back {
+    transform: rotateY(-180deg);
+}
+.horizontal:hover figure.front {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+.horizontal:hover figure.back {
+    transform: rotateY(0deg);
+}
+
+
+
+.vertical figure.front {
+    transform: rotateX(0deg);
+}
+.vertical figure.back {
+    transform: rotateX(-180deg);
+}
+.vertical:hover figure.front {
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+}
+.vertical:hover figure.back {
+    transform: rotateX(0deg);
+}
